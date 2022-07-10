@@ -2,7 +2,7 @@ package com.stringsimilarity;
 
 public class LevenshteinDistance {
 
-
+//The code below implements the levenshtein distance to calculate the similarity between two strings in the range[0,1]
     public static int calculateLevDis(String x, String y) {
         int m = x.length();
         int n = y.length();
