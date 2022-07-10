@@ -4,6 +4,8 @@ public class LevenshteinDistance {
 
 //The code below implements the levenshtein distance to calculate the similarity between two strings in the range[0,1]
     public static int calculateLevDis(String x, String y) {
+        // Levenshtein distance will calculate the minimum number of operations
+        //required to transform one string to another.
         int m = x.length();
         int n = y.length();
 
@@ -35,6 +37,7 @@ public class LevenshteinDistance {
         double maxLength = Double.max(x.length(), y.length());
         if (maxLength > 0) {
             return (maxLength - calculateLevDis(x, y)) / maxLength;
+            //This will give the similarity index between [0,1] after obtaining the levenshtein distance
         }
         return 1.0;
     }
